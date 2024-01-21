@@ -23,7 +23,7 @@ public class ConexionBD {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             
-            conexion = DriverManager.getConnection("jdbc:mysql://192.168.1.50:3306/registro?autoReconnect=true&useSSL=false", "idear", "idear2019");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/registro?autoReconnect=true&useSSL=false", "root", "");
             statement = (Statement) conexion.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
             //statement = (Statement) conexion.createStatement();
         } catch (SQLException e) {
